@@ -17,7 +17,7 @@ sha256sums=(
   'ef23b516537b4f52c306fd61ab9c4197192c06b7202b3b27b63481fec1042a26'
   'e2807043d0c264d6e545070a9ed4563fd862276a0fbe48ef05dfbe03b22cd620'
 )
-license=('GPL3' 'unknown' 'GPL3')
+license=('GPL3' 'unknown' 'GPL3' 'unknown')
 
 prepare() {
   unzip -o skin.zip
