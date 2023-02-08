@@ -1,7 +1,7 @@
-# Maintainer: Pfych <contact@pfy.ch>
+# Maintainer: Pfych <contact at pfy dot ch>
 pkgname=lr2oraja
 pkgver=build1696491429
-pkgrel=4
+pkgrel=5
 pkgdesc="The latest build of beatoraja, but compiled using LR2 judges and gauges."
 arch=('x86_64')
 depends=('liberica-jre-8-full-bin')
@@ -16,7 +16,7 @@ sha256sums=(
   'f2422e1b59d4d8cfe1c75aea5d1bfdd73e7a55c8afa2830681361766d62ea42c'
   'f3b1d2c33297b0572f1a60aee64baf4649c1610f59890db551937fb1cbb1f85f'
   'ef23b516537b4f52c306fd61ab9c4197192c06b7202b3b27b63481fec1042a26'
-  'e2807043d0c264d6e545070a9ed4563fd862276a0fbe48ef05dfbe03b22cd620'
+  '0ec1382690cd847055d1b8e6da36ad6846598b45b25acca5eb5e301a5048da03'
 )
 license=('GPL3' 'unknown' 'GPL3' 'unknown')
 
