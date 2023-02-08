@@ -1,5 +1,5 @@
 pkgname=lr2oraja
-pkgver=0.8.4
+pkgver=build1696491429
 pkgrel=1
 pkgdesc="Cross-platform rhythm game based on Java and libGDX."
 arch=('x86_64')
@@ -7,7 +7,7 @@ license=('GPL3' 'unknown')
 depends=('liberica-jre-8-full-bin')
 makedepend=('unzip')
 source=(
-  'https://github.com/wcko87/lr2oraja/releases/latest/download/LR2oraja.zip'
+  "https://github.com/wcko87/lr2oraja/releases/download/${pkgver}/LR2oraja.zip"
   'beatoraja.sh'
   'skin.zip'
 )
