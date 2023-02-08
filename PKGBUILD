@@ -26,12 +26,17 @@ build() {
 }
 
 package() {
+  rajadir="$pkgdir/opt/beatoraja"
+
   cd "$srcdir/"
-  mkdir -p "$pkgdir/opt/beatoraja"
+  mkdir -p "$rajadir"
   mkdir -p "$pkgdir/usr/lib"
 
-  cp beatoraja.jar "$pkgdir/opt/beatoraja/beatoraja.jar" 
-  cp -r skin "$pkgdir/opt/beatoraja"
+  cp beatoraja.jar "$rajadir/beatoraja.jar" 
+  cp -r skin "$rajadir"
+
+  # Create folders that might be used later
+  mkdir -p "$rajadir/screenshot" "$rajadir/bgm"
 
   chmod -R 777 "$pkgdir/opt/beatoraja"
 
