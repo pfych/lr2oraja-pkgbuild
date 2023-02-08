@@ -9,6 +9,8 @@ Automatically install LR2oraja with the bare minimum required to launch + a desk
 # Install
 
 ```sh
+git clone https://github.com/pfych/lr2oraja-pkgbuild
+cd ./lr2oraja-pkgbuild
 makepkg
 sudo pacman -U <package>
 ```
