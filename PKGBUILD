@@ -1,6 +1,6 @@
 pkgname=lr2oraja
 pkgver=build1696491429
-pkgrel=1
+pkgrel=2
 pkgdesc="The latest build of beatoraja, but compiled using LR2 judges and gauges."
 arch=('x86_64')
 depends=('liberica-jre-8-full-bin')
@@ -41,6 +41,9 @@ package() {
   cp -r skin "$rajadir"
   mkdir -p "$rajadir/screenshot" "$rajadir/bgm"
   chmod -R 777 "$pkgdir/opt/beatoraja"
+
+  # Update start script to refer to correct pkg location
+  sed -i "s#/opt/beatoraja#$rajadir#g" "$srcdir/beatoraja.sh"
 
   # Create Desktop entry
   cp lr2oraja-icon.png "$pkgdir/usr/share/pixmaps"
