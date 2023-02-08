@@ -1,6 +1,7 @@
+# Maintainer: Pfych <contact@pfy.ch>
 pkgname=lr2oraja
 pkgver=build1696491429
-pkgrel=2
+pkgrel=3
 pkgdesc="The latest build of beatoraja, but compiled using LR2 judges and gauges."
 arch=('x86_64')
 depends=('liberica-jre-8-full-bin')
@@ -20,6 +21,7 @@ sha256sums=(
 license=('GPL3' 'unknown' 'GPL3' 'unknown')
 
 prepare() {
+  # Beatoraja will fail to load without a default skin
   unzip -o skin.zip
 }
 
@@ -28,22 +30,21 @@ build() {
 }
 
 package() {
-  rajadir="$pkgdir/opt/beatoraja"
-
+  # Create required directories
   cd "$srcdir/"
-  mkdir -p "$rajadir"
+  mkdir -p "$pkgdir/opt/beatoraja"
   mkdir -p "$pkgdir/usr/lib"
   mkdir -p "$pkgdir/usr/share/applications"
   mkdir -p "$pkgdir/usr/share/pixmaps"
 
   # Move all required Beatoraja Files
-  cp beatoraja.jar "$rajadir/beatoraja.jar" 
-  cp -r skin "$rajadir"
-  mkdir -p "$rajadir/screenshot" "$rajadir/bgm"
+  cp beatoraja.jar "$pkgdir/opt/beatoraja/beatoraja.jar" 
+  cp -r skin "$pkgdir/opt/beatoraja"
+  mkdir -p "$pkgdir/opt/beatoraja/screenshot" "$pkgdir/opt/beatoraja/bgm"
   chmod -R 777 "$pkgdir/opt/beatoraja"
 
   # Update start script to refer to correct pkg location
-  sed -i "s#/opt/beatoraja#$rajadir#g" "$srcdir/beatoraja.sh"
+  sed -i "s#/opt/beatoraja#$pkgdir/opt/beatoraja#g" "$srcdir/beatoraja.sh"
 
   # Create Desktop entry
   cp lr2oraja-icon.png "$pkgdir/usr/share/pixmaps"
