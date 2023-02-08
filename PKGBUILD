@@ -1,7 +1,7 @@
 # Maintainer: Pfych <contact@pfy.ch>
 pkgname=lr2oraja
 pkgver=build1696491429
-pkgrel=3
+pkgrel=4
 pkgdesc="The latest build of beatoraja, but compiled using LR2 judges and gauges."
 arch=('x86_64')
 depends=('liberica-jre-8-full-bin')
@@ -40,7 +40,6 @@ package() {
   # Move all required Beatoraja Files
   cp beatoraja.jar "$pkgdir/opt/beatoraja/beatoraja.jar" 
   cp -r skin "$pkgdir/opt/beatoraja"
-  mkdir -p "$pkgdir/opt/beatoraja/screenshot" "$pkgdir/opt/beatoraja/bgm"
   chmod -R 777 "$pkgdir/opt/beatoraja"
 
   # Update start script to refer to correct pkg location
