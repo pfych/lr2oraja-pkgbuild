@@ -1,25 +1,25 @@
 # Maintainer: Pfych <contact at pfy dot ch>
 pkgname=lr2oraja
-pkgver=build6711481041
-pkgrel=3
+pkgver=build11611350155
+pkgrel=1
 pkgdesc="The latest build of beatoraja, but compiled using LR2 judges and gauges."
 arch=('x86_64')
-depends=('liberica-jre-8-full-bin' 'portaudio')
+depends=('liberica-jdk-17-full-bin' 'portaudio')
 makedepend=('unzip')
 source=(
   "https://github.com/wcko87/lr2oraja/releases/download/${pkgver}/LR2oraja.zip"
   'https://github.com/pfych/lr2oraja-pkgbuild/releases/download/skin/skin.zip'
-  'https://github.com/TNG-dev/tachi-beatoraja-ir/releases/download/v3.0.0/bokutachiIR-3.0.0.jar'
+  'https://github.com/zkrising/tachi-beatoraja-ir/releases/download/v3.1.0/bokutachiIR-3.1.0.jar'
   'libjportaudio.so'
   'beatoraja.sh'
   'lr2oraja-icon.png'
 )
 sha256sums=(
-  '5f6dceccaeb0e786dd1658c1b481e8db114bc90a8a1056bf65753e8936ed3369' # LR2oraja.zip
+  '3cdbe4ecabd7937003fc721cd2eb53af88e52881fc4920480526df6d70b9932b' # LR2oraja.zip
   'ef23b516537b4f52c306fd61ab9c4197192c06b7202b3b27b63481fec1042a26' # skin.zip
-  '3754959d5d6f121dbeed3a78dec2b91a26e915ff4ce68fdee4262b89ad150cb9' # bokutachiIR
+  '11d0069581c81026aa016cf5452c7fd3c1812d220b827b0674ebfa1bbbaaeb83' # bokutachiIR
   'a65d1290d3ee7710f9327c040e6369bf7587eb3609835ed782caaf0ac02d84ed' # libjportaudio.so
-  'fd2638ec66871deec093f736298b5592caadb89b5686648a28e4d082c207bb50' # beatoraja.sh
+  '76683fe99b77474233e67420753ce8264cfca5161f83c59e030824973b884077' # beatoraja.sh
   '0ec1382690cd847055d1b8e6da36ad6846598b45b25acca5eb5e301a5048da03' # lr2oraja-icon.png
 )
 license=(
@@ -49,9 +49,9 @@ package() {
 
   # Move all required Beatoraja Files
   cp libjportaudio.so "$pkgdir/usr/lib"
-  cp beatoraja.jar "$pkgdir/opt/beatoraja/beatoraja.jar" 
+  cp beatoraja.jar "$pkgdir/opt/beatoraja/beatoraja.jar"
   cp -r skin "$pkgdir/opt/beatoraja"
-  cp "bokutachiIR-3.0.0.jar" "$pkgdir/opt/beatoraja/ir"
+  cp "bokutachiIR-3.1.0.jar" "$pkgdir/opt/beatoraja/ir"
   chmod -R 777 "$pkgdir/opt/beatoraja"
 
   # Create Desktop entry
@@ -66,7 +66,7 @@ package() {
   echo "Name=LR2oraja" >> "$desktopEntry"
   echo "Categories=Game;" >> "$desktopEntry"
   echo "Icon=lr2oraja-icon" >> "$desktopEntry"
-  
+
   if [ -z "$XDG_CONFIG_HOME" ]; then
     XDG_CONFIG_HOME="$HOME/.config"
   fi
