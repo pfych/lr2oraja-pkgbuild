@@ -1,7 +1,7 @@
 # Maintainer: Pfych <contact at pfy dot ch>
 pkgname=lr2oraja
 pkgver=build11611350155
-pkgrel=2
+pkgrel=3
 pkgdesc="The latest build of beatoraja, but compiled using LR2 judges and gauges."
 arch=('x86_64')
 depends=('liberica-jdk-17-full-bin' 'portaudio')
@@ -72,7 +72,7 @@ package() {
   fi
 
   # Create config symlink
-  ln -sfn "$pkgdir/opt/beatoraja" "$XDG_CONFIG_HOME/beatoraja"
+  ln -sfn "/opt/beatoraja" "$XDG_CONFIG_HOME/beatoraja"
 
   # Install LR2oraja
   install -D beatoraja.sh "$pkgdir/usr/bin/beatoraja"
