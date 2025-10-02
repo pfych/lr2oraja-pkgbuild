@@ -1,11 +1,11 @@
 # Maintainer: Pfych <contact at pfy dot ch>
 pkgname=lr2oraja
 pkgver=build11611350155
-pkgrel=3
+pkgrel=4
 pkgdesc="The latest build of beatoraja, but compiled using LR2 judges and gauges."
 arch=('x86_64')
 depends=('liberica-jdk-17-full-bin' 'portaudio')
-makedepend=('unzip')
+makedepends=('unzip')
 source=(
   "https://github.com/wcko87/lr2oraja/releases/download/${pkgver}/LR2oraja.zip"
   'https://github.com/pfych/lr2oraja-pkgbuild/releases/download/skin/skin.zip'

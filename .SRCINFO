@@ -1,13 +1,14 @@
 pkgbase = lr2oraja
 	pkgdesc = The latest build of beatoraja, but compiled using LR2 judges and gauges.
 	pkgver = build11611350155
-	pkgrel = 3
+	pkgrel = 4
 	arch = x86_64
 	license = GPL3
 	license = GPL3
 	license = MIT
 	license = unknown
 	license = unknown
+	makedepends = unzip
 	depends = liberica-jdk-17-full-bin
 	depends = portaudio
 	source = https://github.com/wcko87/lr2oraja/releases/download/build11611350155/LR2oraja.zip
