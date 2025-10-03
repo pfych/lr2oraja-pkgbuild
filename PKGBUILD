@@ -1,7 +1,7 @@
 # Maintainer: Pfych <contact at pfy dot ch>
 pkgname=lr2oraja
 pkgver=build11611350155
-pkgrel=4
+pkgrel=5
 pkgdesc="The latest build of beatoraja, but compiled using LR2 judges and gauges."
 arch=('x86_64')
 depends=('liberica-jdk-17-full-bin' 'portaudio')
@@ -19,7 +19,7 @@ sha256sums=(
   'ef23b516537b4f52c306fd61ab9c4197192c06b7202b3b27b63481fec1042a26' # skin.zip
   '11d0069581c81026aa016cf5452c7fd3c1812d220b827b0674ebfa1bbbaaeb83' # bokutachiIR
   'a65d1290d3ee7710f9327c040e6369bf7587eb3609835ed782caaf0ac02d84ed' # libjportaudio.so
-  '72b756f29c11adf8c3ce880afc96fe550fed28227b1f7b501cf0af4e838ea58b' # beatoraja.sh
+  '2d8dffe53a24fd5df6198ee30a4473129cfbeb3e7a6c8f1e70535a19a871b3e8' # beatoraja.sh
   '0ec1382690cd847055d1b8e6da36ad6846598b45b25acca5eb5e301a5048da03' # lr2oraja-icon.png
 )
 license=(
